@@ -4,6 +4,7 @@
   "dependencies": {
     "underscore": "1.1.6",
     "redis" : "0.6.0",
-    "socket.io": "0.6.17"
+    "socket.io": "0.6.17",
+    "express": "2.2.0"
   }
 }
