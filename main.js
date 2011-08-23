@@ -28,7 +28,10 @@ var express = require('express');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-  response.send('Hello World!');
+  setTimeout(function() {
+      response.send('Hello World!');
+  }, 5000);
+  
 });
 
 var port = process.env.PORT || 3000;
