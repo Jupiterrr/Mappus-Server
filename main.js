@@ -13,7 +13,7 @@ redis.on("error", function (err) {
 
 
 server = http.createServer(httpRequest);
-server.listen(80, "mappus.heroku.com");
+server.listen(process.env.PORT || 3000, "mappus.heroku.com");
 
 
 function httpRequest(req, res) {
