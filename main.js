@@ -29,8 +29,7 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   setTimeout(function() {
-      console.log(request);
-      response.send('Hello World!');
+      response.send({test:123});
   }, 5000);
   
 });
