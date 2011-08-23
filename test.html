@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" /> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/> 
+<title>Mappus</title> 
+
+<script type="text/javascript">
+  function ready() {
+    // websocket = new WebSocket("ws://localhost:1337"); 
+    //     websocket.onopen = function(evt) { text("open"); }; 
+    //     websocket.onclose = function(evt) { text("close"); }; 
+    //     websocket.onmessage = function(evt) { text("msg"); }; 
+    //     websocket.onerror = function(evt) { text("err"); };
+  }
+  
+  
+  function peng() {
+    
+    
+    websocket.send("testtesttest"); 
+  }
+  
+  function text(s) {
+    var text = document.createTextNode(s);
+    var p = document.createElement("p");
+    
+    document.getElementById("results").appendChild(p);
+    p.appendChild(text);
+  }
+</script>
+
+<script src="http://localhost:1337/socket.io/socket.io.js"></script> 
+<script> 
+ var socket = new io.Socket("localhost", {port: 1337}); 
+ socket.connect();
+ socket.on('connect', function(){ text("open"); }) 
+ socket.on('message', function(msg){ text("msg: " + JSON.stringify(msg)); }) 
+ socket.on('disconnect', function(){ text("close"); }) 
+</script>
+
+</head> 
+<body onload="ready();">
+  <button onclick="peng();">peng</button>
+  <div id="results"></div>
+</body> 
+</html>
