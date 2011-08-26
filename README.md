@@ -2,6 +2,8 @@ Mappus-Server
 =============
 Mappus-Server is the server for [Mappus](https://github.com/Jupiterrr/Mappus). 
 
+----------------------------------------------
+
 Whats happening:
 
 * client sends Facebook access token to server 
