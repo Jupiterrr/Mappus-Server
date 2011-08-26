@@ -1,5 +1,4 @@
 node_modules
-Gemfile.lock
 .DS_Store
-.gitignore 
-.git
+.Trashes
+.com.apple.timemachine.supported
